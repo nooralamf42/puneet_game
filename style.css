@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: #fafafa;
+    position: relative;
+    overflow: hidden;
+}
+
+.game{
+    position: absolute;
+    bottom: 20%;
+    width: 100%;
+    height: 200px;
+    background: url("./public/background.png");
+    animation: moveBg 30s infinite;
+}
+
+
+@keyframes moveBg {
+    from{
+        background-position: 1200%;
+    }
+    to{
+        background-position: 0;
+    }
+}
+
+.title{
+    margin-top: 50px;
+    text-align: center;
+}
+.instruction{
+    text-align: right;
+    margin-right: 25px;
+    margin-top: 20px;
+}
+.puneet{
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    pointer-events: none;
+    transition: 1s scale ease, 1s rotate ease;
+}
+
+.enemy{
+    position: absolute;
+    bottom: 0;
+    right: -150px;
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.puneet-hit{
+    scale: 0;
+    rotate: 360deg;
+}
