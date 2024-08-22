@@ -28,18 +28,18 @@ document.addEventListener("keydown", (e)=>{
 
 const enemies = [
     {
-        image : '/public/babu1.png',
-        sounds : ['/public/babu1.mp3', '/public/babu2.mp3']
+        image : 'public/babu1.png',
+        sounds : ['public/babu1.mp3', 'public/babu2.mp3']
     },
 
     {
-        image : '/public/akhsay1.png',
-        sounds : ['/public/akhsay1.mp3', '/public/akhsay2.mp3']
+        image : 'public/akhsay1.png',
+        sounds : ['public/akhsay1.mp3', 'public/akhsay2.mp3']
     },
 
     {
-        image : '/public/bhau1.png',
-        sounds : ['/public/bhau1.mp3', '/public/bhau2.mp3']
+        image : 'public/bhau1.png',
+        sounds : ['public/bhau1.mp3', 'public/bhau2.mp3']
     },
 
 ]
@@ -49,7 +49,7 @@ const enemies = [
 let jumpHeight = 0
 let isJumping = false
 
-let jumpSound = sound('/public/jumpSound.mp3')
+let jumpSound = sound('public/jumpSound.mp3')
 
 function jump(){
     jumpSound.currentTime = 0.5
@@ -61,7 +61,7 @@ function jump(){
         puneet.style.bottom = jumpHeight + "px"
 
         if(jumpHeight>=20){
-            puneet.src = '/public/puneet1.png'
+            puneet.src = 'public/puneet1.png'
         }
         if(isGameOver){
             clearInterval(jumpUpInterval)
@@ -74,7 +74,7 @@ function jump(){
                 puneet.style.bottom = jumpHeight + "px"
 
                 if(jumpHeight<=20){
-                    puneet.src = '/public/puneet2.png'
+                    puneet.src = 'public/puneet2.png'
                 }
                 if(isGameOver){
                     clearInterval(jumpDownInterval)
